@@ -23,9 +23,7 @@ export default function clearOutputPlugin() {
         const outputs = Array.isArray(options.output)
           ? options.output
           : [options.output];
-        outputDirs = outputs
-          .map((output) => output.dir || path.dirname(output.file))
-          .filter(Boolean);
+        outputDirs = outputs.map((output) => output.dir).filter(Boolean);
       }
       return null; // 不修改配置
     },

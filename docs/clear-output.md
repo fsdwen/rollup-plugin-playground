@@ -58,7 +58,7 @@ export default function clearOutputPlugin() {
           ? options.output
           : [options.output];
         outputDirs = outputs
-          .map((output) => output.dir || path.dirname(output.file))
+          .map((output) => output.dir)
           .filter(Boolean);
       }
       return null; // Do not modify configuration
