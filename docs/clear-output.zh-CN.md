@@ -68,7 +68,7 @@ export default function clearOutputPlugin() {
      * 在构建开始前清理输出目录
      * @param {import('rollup').BuildStartOptions} options 构建开始选项
      */
-    async buildStart() {
+    buildStart() {
       for (const dir of outputDirs) {
         const targetPath = path.resolve(workspace, dir);
         try {

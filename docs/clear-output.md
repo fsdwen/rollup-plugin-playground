@@ -68,7 +68,7 @@ export default function clearOutputPlugin() {
      * Clean the output directories before the build starts
      * @param {import('rollup').BuildStartOptions} options Build start options
      */
-    async buildStart() {
+    buildStart() {
       for (const dir of outputDirs) {
         const targetPath = path.resolve(workspace, dir);
         try {
