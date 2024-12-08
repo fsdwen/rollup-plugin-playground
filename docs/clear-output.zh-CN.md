@@ -36,10 +36,6 @@ import fs from "fs";
 import path from "path";
 import * as rimraf from "rimraf";
 
-/**import fs from "fs";
-import path from "path";
-import * as rimraf from "rimraf";
-
 /**
  * 清理构建输出目录的 Rollup 插件
  * @returns {import('rollup').Plugin} Rollup 插件对象
@@ -104,7 +100,6 @@ export default function clearOutputPlugin() {
   - 将有效的输出目录存储在 `outputDirs` 数组中。
   - 返回 `null`，表示插件不对配置进行任何修改。
 
-
 #### 2.3.2 `buildStart` 钩子
 
 - **触发时机**：在构建开始之前触发。
@@ -115,7 +110,6 @@ export default function clearOutputPlugin() {
   - 如果目录存在，使用 `rimraf.sync` 同步删除目录及其内容。
   - 输出日志信息，指示目录已被清理或无需清理。
   - 如果在清理过程中发生错误，调用 `this.error` 抛出构建错误，阻止构建继续进行。
-
 
 ### 2.4 配置和使用插件
 
